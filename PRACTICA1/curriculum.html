@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curriculum Vitae</title>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		@font-face {
+   			font-family: myFont;
+   			src: url(Distant_Stroke.otf);
+		}
+		div.encabezado{
+			width: 70%;
+			height: auto;
+			margin:auto;
+			background: -moz-linear-gradient(bottom right, hsl(0, 0%, 60%),hsl(0, 0%, 80%));
+			font-family: myFont;
+			font-size: 500%;
+		}
+
+		#main_img{
+			border-radius:50%;
+			float:left;
+			margin-left:10px;
+			margin-top:10px;
+			width:10%;
+			height:auto
+
+		}
+
+		table{
+			width: 70%;
+			height: auto;
+			margin:auto;
+			background: url("fondo.png") no-repeat right;
+			background-size: cover;
+			font-family: Comic Sans MS;
+			border-collapse: collapse;;
+		}
+
+		td{
+			width: 100%;
+		}
+
+		span.titulos{
+			color: white;
+			font-size:200%;
+		}
+
+		#img_tabla{
+			float:right;
+			margin-right: 10px;
+			width: 25%;
+			height: auto;
+		}
+
+		span.descripcion{
+			color:green;
+		}
+
+		div.izquierda{
+			box-shadow: 5px 5px 4px grey;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="encabezado">
+		<header>
+			<figure>
+				<img src="foto.jpg" id="main_img"/>
+			</figure>
+			<p style="font-size:180%;margin:auto;font-family:myFont">Alberto Pavo Blas</p>
+		</header>
+	</div>
+	<section>
+		<table>
+			<article>
+				<tr>
+					<td style="background-color: hsl(102,60%,60%)"><span class="titulos">Datos de Contacto<br></span><br>C/Sierra de alcubierre<br>28923 Alcorcón, Madrid<br><img id="img_tabla" src="contacto.png">617112743<br>a.pavo93@gmail.com<br></td>
+					<td rowspan="3">
+					<div class="izquierda">
+						<span class="titulos">Formación Académica <br></span><b>Cursando </b> <span class="descripcion">Grado en Ingeniería de Sistemas Audiovisuales y Multimedia<br></span> Universidad Rey Juan Carlos <br> <br> <b>2011</b> <span class="descripcion">Bachiller en Ciencia y Tecnología<br></span> Centro Educativo Villa de Alcorcón <br>
+					</div>
+
+					<div class="izquierda">
+						<span class="titulos"> <br> Experiencia Laboral <br></span><b>Actualmente </b> <span class="descripcion">Consultor Junior<br></span> Everis <br> <br> <b>2011-2013 </b> <span class="descripcion">Monitor de fútbol sala <br></span> Centro Educativo Villa de Alcorcón <br>
+					</div>
+
+					<div class="izquierda">
+						<span class="titulos"> <br> Informática <br></span><b> Programación </b> <span class="descripcion"> Java,Python,ADA,Matlab,JavaScript,HTML,CSS,XML,OpenGL<br> </span> <b> Redes </b> <span class="descripcion"> TCP/IP,UDP,HTTP,SIP,UDP<br>
+						</span> <b> Ofimática</b> <span class="descripcion"> Microsoft Office <br> </span>
+					</div>
+
+					</td>
+				</tr>
+				<tr>
+					<td style="background-color: hsl(255,60%,60%)"><span class="titulos">Idiomas<br></span> <br>Inglés TOEIC(750 pts)<img id="img_tabla" src="idiomas.png"><br>Frances nivel bajo<br></td>
+				</tr>
+				<tr>
+					<td style="background-color: hsl(51,80%,60%)"><span class="titulos">Conocimientos<br></span><br>Procesado de señal digital.<br>Procesado digital de audio y video.<img id="img_tabla" src="conocimientos.png"><br>Sistemas de difusión de audio y video. <br>Acústica Arquitectónica y acondicionamiento acústico.<br></td>
+				</tr>
+
+			</table>
+		</article>
+	</section>
+	<footer>
+		<p> Practica 1 LTAW <P>
+	</footer>
+</body>
+</html>
