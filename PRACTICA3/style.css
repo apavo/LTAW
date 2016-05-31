@@ -1,0 +1,121 @@
+body {
+    background-color: #848484;
+}
+
+#main{
+    overflow-y:scroll;
+}
+
+.menu {
+    position: fixed;
+    overflow: hidden;
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+    background-color: #333;
+    float: left;
+    width: 100%;
+}
+
+.menu li {
+    float:left;
+    text-align: center;
+
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding:15 80;
+}
+
+.menu li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.search{
+    float:right;
+    margin-top:25%;
+    margin-left:75%;
+}
+.search input[type=text]{
+    margin-top: 5px;
+    margin-right: 5px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-image: url('searchicon.png');
+    background-position: 2px 3px; 
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    padding: 8px 15px 11px 35px;
+}
+
+.photo{
+    align:center;
+    height:80%;
+    width:80%
+}
+
+#products{
+    margin-top:70px;
+
+}
+
+
+.listproducts{
+    width: 70%;
+    background-color: white;
+    border-collapse: collapse;
+    overflow: scroll;
+}
+
+.listproducts tr{
+    
+}
+
+tr:hover{background-color:#FAFAD2}
+
+.listproducts tr td{
+    padding: 10px;
+    border-bottom: 5px solid black;
+    text-align: center
+}
+
+.opinion textarea{
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #EEEBCE;
+    font-size: 16px;
+    resize: none;
+}
+
+.opinion input[type=submit]{
+    border-radius: 10px;
+    width: 30%;
+    font-size: 100%;
+    cursor: pointer;
+    background-color: #0C1961;
+    color: white;
+}
+
+.buy_icon{
+    width: 100%;
+}
+
+.buy_button{
+    width: 10%;
+    height:auto;
+    background-color: white;
+}
+.form_response{
+    margin-top: 8%;
+    margin-left: 10%;
+    width: 80%;
+    height: auto;
+    background-color: white;
+    font-size: 30px;
+    padding: 10px;
+}
+}

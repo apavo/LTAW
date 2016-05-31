@@ -1,0 +1,83 @@
+body {
+    background-color: #848484;
+}
+
+#main{
+    overflow-y:scroll;
+}
+
+.menu {
+    position: fixed;
+    overflow: hidden;
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+    background-color: #333;
+    float: left;
+    width: 100%;
+}
+
+.menu li {
+    float:left;
+    text-align: center;
+
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding:5% 35%;
+}
+
+.menu li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.search input[type=text]{
+    margin-top: 5px;
+    margin-right: 5px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-image: url('searchicon.png');
+    background-position: 2px 3px;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    padding: 5px 10px 6px 20px;
+}
+
+.order{
+
+    margin: 3%;
+}
+
+.photo{
+    align:center;
+    height:80%;
+    width:80%
+}
+
+#products{
+    margin-top:70px;
+
+}
+
+.listproducts{
+    width: 70%;
+    background-color: white;
+    border-collapse: collapse;
+    overflow: scroll;
+}
+
+.listproducts tr{
+
+}
+
+tr:hover{background-color:#FAFAD2}
+
+.listproducts tr td{
+    padding: 10px;
+    border-bottom: 5px solid black;
+    text-align: center
+}

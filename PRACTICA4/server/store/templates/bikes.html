@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{%block title %} bikes {% endblock %}
+{% block content %}
+	<div id="products">
+			<table class="listproducts" >
+				{% for bike in bikeslist %}
+				<tr>
+					<td> <img class="photo" src = "{% static bike.archive %}"> <td>
+					<td style= "width: 500px;">{{bike.model}} <br> {{bike.price}}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		</div>
+{% endblock %}

@@ -1,0 +1,68 @@
+<html>
+ <head>
+ 	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+ 	<title>Web Principal</title>
+ 	<link rel="stylesheet" type="text/css" href="style.css"></link>
+ 	<script type="text/javascript" src="cookies_handler.js"></script>
+ </head>
+ <body onload="checkCookie()">
+ 	<div style="position:fixed;">
+	 	<ul class="menu">
+	  		<li><a href="index.html">Home</a></li>
+	 		<li><a href="bike.html">Bikes</a></li>
+	  		<li><a href="books.html">Books</a></li>
+	  		<li><a href="music.html">Music</a></li>
+	  		<li><a href="opinion.html">Opinion</a></li>
+	  		<li><a href="purchase.html">Purchase</a></li>
+		</ul>
+		<form action="" class="search" id="search_form" autocomplete= "off" onsubmit="return false">
+	  				<input type="text"  list= "options" name="search" placeholder="Search.." oninput ="loadSearch()" id="search">
+	  				<datalist id="options"></datalist>
+	  				<input type="submit" value="Search" onclick = "clear_content()"></input>
+  		</form>
+	</div>
+	<img src="logo.png">
+
+	<script type="text/javascript">
+		function loadSearch(){
+			var xhttp = new XMLHttpRequest();
+			var input = document.getElementById("search");
+			xhttp.open("POST", "./search" , true);
+		  	xhttp.send(input.value);
+		  	xhttp.onreadystatechange = function() {
+			 	 if (xhttp.readyState == 4 && xhttp.status == 200) {
+			 	 	if(input.value.length <= 3){
+			 	 		//borro el datalist para que no se duplique y qe al haber menos de tres
+			 	 		//letras no haya sugerencias
+			 	 		removeDatalist();
+			 	 	}
+			 	 	if(input.value.length == 3){
+			 	 		data_list = document.getElementById("options");
+			 	 		var suggest = JSON.parse(xhttp.responseText);
+			 	 		suggest = suggest.category;
+				 	 	for (var j = 0; j < suggest.length; j++) {
+			 	 			var option = document.createElement("OPTION");
+			 	 			option.value = suggest[j];
+			 	 			data_list.appendChild(option);
+			 	 		};
+			 	 	}
+			 	}
+			}
+
+		}
+
+		function removeDatalist(){
+			//Borra el datalist
+			var opt = document.getElementById("options");
+ 			while(opt.hasChildNodes())
+				opt.removeChild(opt.firstChild);
+			}
+
+		function clear_content(){
+			console.log(document.getElementById("search"))
+			var x =document.getElementById("search").value = "";
+			
+		}
+	</script>
+ </body>
+</html>

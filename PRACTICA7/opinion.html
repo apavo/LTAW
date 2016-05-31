@@ -1,0 +1,47 @@
+<html>
+ <head>
+ 	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<title>Opinion</title></head>
+ 	<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+	<a href="index.html" style="font-size:30px;color:black"> <img src="home.png" style="width:5%"></a>
+ 	<form  id="form_opinion"class="Opinion" method="POST" onsubmit="methd()">
+ 		<fieldset>
+ 			<legend>Fill your Order</legend>
+	 		<input type="radio" name="gender" value="Mr." checked> Mr. 
+	 		<input type="radio" name="gender" value="Mrs." checked> Mrs.
+	 		<input type="text" name="name" placeholder="name" style="width:40%"> <br><br>
+	 		Category: 
+	 		<select name="item" style="width:40%;font-size:80%">
+    			<option value="bikes">Bikes</option>
+   				<option value="books">Books</option>
+   				<option value="music">Music</option>
+  			</select>
+ 			<br><br>
+ 			<input type="text" name="product" placeholder="Product" style="width:40%"> <br><br>
+	  		<input type="email" name="email" placeholder="E-mail" style="width:40%"> <br> <br>
+	  		<input type="date" name="date" placeholder="date" style="width:40%"> <br> <br>
+	  		<textarea name="opinion" rows="20" cols="80" placeholder="Write your comments"></textarea>
+	  		<br><br>
+        Phone number <input type="number" name="phone"> <br><br>
+	  		Urgency of order: 0 <input type="range" name="points" min="0" max="10"> 10 <br> <br>
+        Qualification: 0 <input type="range" name="qualification" min="0" max="5"> 5 <br> <br>
+	  		Select a color <input type="color" name="color" value="#ff0000"> <br><br>
+	  		Select send method <br> <select id="mth" oninput="methd()" style="width:40%;font-size:80%">
+    			<option value="POST">POST</option>
+   				<option value="GET">GET</option>
+  			</select> <br> <br>
+	  		<input type="submit" value="Submit">
+  		</fieldset>
+  	</form>
+  	<script>
+  		function methd(){
+  			mth = document.getElementById("mth");
+  			form = document.getElementById("form_opinion");
+  			console.log(form.method)
+  			form.method = mth.value;
+  			console.log(form.method)
+  		}
+  	</script>
+</body>
+</html>

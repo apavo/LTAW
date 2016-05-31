@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{%block title %} Orders {% endblock %}
+{% block content %}
+ 	<h1>Purchase</h1>
+    <form method="POST" action="{% url 'store.views.order_view' %}" class="order" onsubmit="window.alert('Gracias por su compra, si los datos son erroneos vuelva a rellenarlos')">
+      {% csrf_token %}
+    	<fieldset style="width:50%">
+    		<legend>Fill your Order</legend>
+			     {{ form.as_p }}
+    		<input class="save_order" type="submit" class="save" value="save"></input>
+    	</fieldset>
+    </form>
+ {% endblock %}

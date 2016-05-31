@@ -1,0 +1,29 @@
+{%load staticfiles%}
+<html>
+ <head>
+ 	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<title>{% block title %} Store {% endblock %}</title>
+ 	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+ </head>
+ 	
+ <body>
+ 	<div id="main">
+	 	<ul class="menu">
+	  		<li><a href="{% url 'store.views.index' %}">Home</a></li>
+	 		<li><a href="{% url 'store.views.bikes_view' %}">Bikes</a></li>
+	  		<li><a href="{% url 'store.views.books_view' %}">Books</a></li>
+	  		<li><a href="{% url 'store.views.music_view' %}">Music</a></li>
+	  		<li><a href="{% url 'store.views.order_view' %}">Orders</a></li>
+	  		<li>
+	  			<form action="{% url 'store.views.search_view' %}" class="search">
+	  				<input type="text" name="search" placeholder="Search..">
+	  				<input type="submit" value="Search">
+  				</form>
+	  		</li>
+		</ul> 
+		{% block content %}
+			<div> <img src={% static "images/logo.png" %}></div>
+		{% endblock %}
+	</div>
+ </body>
+</html>

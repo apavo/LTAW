@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{%block title %} bikes {% endblock %}
+{% block content %}
+	<div id="products">
+			<table class="listproducts" >
+				{% for book in booklist %}
+				<tr>
+					<td> <img class="photo" src = "{% static book.archive %}" > <td>
+					<td style= "width: 500px;"> {{book.descrition}} <br> <br>{{book.title}} 
+					 / {{book.author}} <br> {{book.price}} 
+					</td>
+				</tr>
+				{% endfor %}
+			</table>
+		</div>
+{% endblock %}

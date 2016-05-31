@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{%block title %} Orders {% endblock %}
+{% block content %}
+ 	{% if query %}
+ 		<h1> Results: </h1>
+ 			{% if results_bike or results_book or results_music %}
+ 				<div id="products">
+					<table class="listproducts" >
+					{% for bike in results_bike %}
+					<tr>
+						<td> <img class="photo" src = "{% static bike.archive %}"> <td>
+						<td style= "width: 500px;">{{bike.model}} <br> {{bike.price}}</td>
+					</tr>
+					{% endfor %}
+
+					{% for book in results_book %}
+					<tr>
+						<td> <img class="photo" src = "{% static book.archive %}" > <td>
+						<td style= "width: 500px;"> {{book.descrition}} <br> <br>{{book.title}} 
+						 / {{book.author}} <br> {{book.price}} 
+						</td>
+					</tr>
+					{% endfor %}
+
+					{% for music in results_music %}
+						<tr>
+							<td> <img class="photo" src = "{% static music.archive %}"> <td>
+							<td style= "width: 500px;">{{music.author}} / {{music.title}} <br>{{music.price}}</td>
+						</tr>
+					{% endfor %}
+					</table>
+				</div>
+			{% else %}
+				<div style="margin-top:90px">
+					<p style="text-align:center;font-size:200%"> Results not found </p>
+				</div>
+			{%endif %}
+	{% else %}
+		<div style="margin-top:90px">
+			<p style="text-align:center;font-size:200%"> Results not found </p>
+		</div>
+	{% endif %}
+{% endblock %}
